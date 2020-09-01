@@ -1,0 +1,8 @@
+pipeline:
+  build:
+    image: maven:3.5.0-alpine
+    commands:
+      - mvn -B clean compile testCompile
+  test:
+    image: maven:3.5.0-alpine
+    commands: mvn test
